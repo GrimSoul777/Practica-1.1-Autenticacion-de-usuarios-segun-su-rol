@@ -19,15 +19,11 @@ class Usuario extends Authenticatable
         'rol_id'
     ];
 
-    protected $hidden = [
-        'password',
-    ];
+    protected $hidden = ['password',];
 
     protected function casts(): array
     {
-        return [
-            'password' => 'hashed',
-        ];
+        return ['password' => 'hashed',];
     }
 
     public function rol(): BelongsTo
